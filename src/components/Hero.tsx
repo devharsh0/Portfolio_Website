@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import ProfileCard from './ProfileCard';
+import avatar from './src/assets/avatar.png';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -72,7 +73,7 @@ const Hero: React.FC = () => {
                 handle="harshdevaser"
                 status="Online"
                 contactText="Contact Me"
-                avatarUrl="./src/assets/avatar.png"
+                avatarUrl= {avatar}
                 showUserInfo={false}
                 enableTilt={false}
                 enableMobileTilt={false}

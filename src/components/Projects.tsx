@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Sql from './src/assets/SQL.png';
+import Expanse from './src/assets/Expanse Tracker.png';
+import AILang from './src/assets/Flashcard.png';
 import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -11,7 +14,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: t('projects.project1.title'),
       description: t('projects.project1.description'),
-      image: './src/assets/SQL.png',
+      image: Sql,
       tags: ['React', 'Node.js', 'PostgreSQL', 'Gemini API'],
       details: {
         duration: '4 months',
@@ -29,7 +32,7 @@ const Projects: React.FC = () => {
       id: 2,
       title: t('projects.project2.title'),
       description: t('projects.project2.description'),
-      image: './src/assets/Flashcard.png',
+      image: AILang,
       tags: ['Angular', 'Gemini AI', 'Firebase', 'WCAG'],
       details: {
         duration: '3 months',
@@ -47,15 +50,18 @@ const Projects: React.FC = () => {
       id: 3,
       title: t('projects.project3.title'),
       description: t('projects.project3.description'),
-      image: './src/assets/Expanse Tracker.png',
+      image: Expanse,
       tags: [  'React (TypeScript)',
         'Gemini AI',
         'Chart.js',
         'Vite'],
       details: {
-        duration: '12 months',
-        role: 'Project Engineer',
-        tools: ['Angular', '.NET Core', 'AI Code Analysis', 'Micro-frontends'],
+        duration: ' months',
+        role: 'Full Stack Developer',
+        tools: ['React (TypeScript)',
+        'Gemini AI',
+        'Chart.js',
+        'Vite'],
         highlights: [
           'AI-powered expense categorization using GPT-4o',
           'Real-time financial insights with Chart.js visualizations',
