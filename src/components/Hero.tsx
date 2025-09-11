@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                 handle="harshdevaser"
                 status="Online"
                 contactText="Contact Me"
-                avatarUrl="/src/assets/avatar.png"
+                avatarUrl="./src/assets/avatar.png"
                 showUserInfo={false}
                 enableTilt={false}
                 enableMobileTilt={false}

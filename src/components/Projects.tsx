@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: t('projects.project1.title'),
       description: t('projects.project1.description'),
-      image: '/src/assets/SQL.png',
+      image: './src/assets/SQL.png',
       tags: ['React', 'Node.js', 'PostgreSQL', 'Gemini API'],
       details: {
         duration: '4 months',
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
       id: 2,
       title: t('projects.project2.title'),
       description: t('projects.project2.description'),
-      image: '/src/assets/Flashcard.png',
+      image: './src/assets/Flashcard.png',
       tags: ['Angular', 'Gemini AI', 'Firebase', 'WCAG'],
       details: {
         duration: '3 months',
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
       id: 3,
       title: t('projects.project3.title'),
       description: t('projects.project3.description'),
-      image: '/src/assets/Expanse Tracker.png',
+      image: './src/assets/Expanse Tracker.png',
       tags: [  'React (TypeScript)',
         'Gemini AI',
         'Chart.js',
