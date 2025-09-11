@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Sql from './src/assets/SQL.png';
-import Expanse from './src/assets/Expanse Tracker.png';
-import AILang from './src/assets/Flashcard.png';
+import Sql from '../assets/SQL.png';
+import Expanse from '../assets/Expanse Tracker.png';
+import AILang from '../assets/Flashcard.png';
 import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import ProfileCard from './ProfileCard';
-import avatar from './src/assets/avatar.png';
+import avatar from '../assets/avatar.png';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
