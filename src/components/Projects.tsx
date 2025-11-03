@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sql from '../assets/SQL.png';
 import Expanse from '../assets/Expanse Tracker.png';
 import AILang from '../assets/Flashcard.png';
+import Figma from '../assets/Figma.png';
 import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -16,6 +17,8 @@ const Projects: React.FC = () => {
       description: t('projects.project1.description'),
       image: Sql,
       tags: ['React', 'Node.js', 'PostgreSQL', 'Gemini API'],
+      figmaUrl: 'https://www.figma.com/proto/s5V3qtxnyax17Lg6klAMSF/SQL?node-id=0-1&t=pxppyJXU36DQq4KJ-1',
+      showFigma: true,
       details: {
         duration: '4 months',
         role: 'Full Stack Developer',
@@ -34,6 +37,8 @@ const Projects: React.FC = () => {
       description: t('projects.project2.description'),
       image: AILang,
       tags: ['Angular', 'Gemini AI', 'Firebase', 'WCAG'],
+      figmaUrl: undefined,
+      showFigma: false,
       details: {
         duration: '3 months',
         role: 'Frontend Developer & UX Designer',
@@ -55,8 +60,10 @@ const Projects: React.FC = () => {
         'Gemini AI',
         'Chart.js',
         'Vite'],
+      figmaUrl: "https://www.figma.com/proto/CWKBOUcRV4aOUDveQAvHKY/Expanse-Tracker?node-id=0-1&t=3OYAfyWKSmbekw34-1",
+      showFigma: true,
       details: {
-        duration: ' months',
+        duration: '3 months',
         role: 'Full Stack Developer',
         tools: ['React (TypeScript)',
         'Gemini AI',
@@ -155,7 +162,20 @@ const Projects: React.FC = () => {
             </div>
             
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-4">{selectedProjectData.title}</h3>
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-2xl font-bold text-white">{selectedProjectData.title}</h3>
+                {selectedProjectData.showFigma && selectedProjectData.figmaUrl && (
+                  <a
+                    href={selectedProjectData.figmaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-4"
+                    aria-label="Open Figma design"
+                  >
+                    <img src={Figma} alt="Figma" className="w-10 h-10 hover:opacity-80 transition-opacity" />
+                  </a>
+                )}
+              </div>
               <p className="text-gray-300 mb-6 leading-relaxed">{selectedProjectData.description}</p>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
